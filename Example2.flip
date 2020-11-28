@@ -1,0 +1,48 @@
+Begin:
+    CreateImage: red, "red.png"
+    CreateImage: blue, "blue.png"
+    CreateImage: purple, "purple.png"
+    Var: size
+    Assign: size, 100
+    Var :inc
+    Assign : inc ,2
+    Var : pos
+    Var : hpos
+    Assign : pos , 100
+    Assign : hpos, 100
+    Var :pinc
+    Var : hinc
+    Assign : pinc , 150
+    Assign : hinc , 10
+    ResizeImage: red, ABS, size,size
+    ResizeImage : blue ,ABS, size,size
+    ResizeImage: purple, ABS,size,size
+    GetImageSize: red, rx, ry
+    GetImageSize: blue , bx,by
+    GetImageSize: purple, px, py
+    Print: rx + " " + ry
+    Print: bx + " " + by
+    Print: px + " " + py
+
+    CreateFrame: frame1
+    AddImageToFrame : red, frame1, pos, hpos
+    AddImageToFrame: blue, frame1, pos + pinc, hpos
+    AddImageToFrame: purple, frame1, pos + pinc + pinc,hpos
+    AddFrame: frame1
+
+    LOOP: st, 1,18:
+    Begin:
+        CreateFrame: frame2
+        ResizeImage: red, ABS, size,size
+        ResizeImage : blue ,ABS, size,size
+        ResizeImage: purple, ABS,size,size
+        AddImageToFrame : red, frame2, pos, hpos
+        AddImageToFrame: blue, frame2, pos + pinc, hpos
+        AddImageToFrame: purple, frame2, pos + pinc + pinc,hpos
+        AddFrame: frame2
+        Assign : size ,size + inc
+        Assign : hpos , hpos +hinc
+    End:
+    GenerateFlip:
+
+End:
