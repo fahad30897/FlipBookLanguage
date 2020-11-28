@@ -19,7 +19,7 @@ You must have python version 3.7+ installed.
 
 *Usage:*
 
-1.> python main.py <input-file> -o <output-file> [-d <int>] [-r <int>] [-l <int>] [-t ("pdf", "gif")]
+1.> python main.py *input-file* -o *output-file* [-d *int*] [-r *int*] [-l *int*] [-t *pdf or gif*]
 
 *Options:*
 
