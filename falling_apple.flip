@@ -1,0 +1,35 @@
+Begin:
+	Var: start
+    Var : inc
+    Assign : start, 100
+    Assign : inc, 40
+
+    CreateImage: tree, "Tree_edited.jpg"
+	CreateImage: apple, "apple_new.jpg"
+	CreateImage: steve, "steve_jobs.jpg"
+	ResizeImage: apple, ABS, 50, 50
+	ResizeImage: tree, ABS, 640, 480
+	ResizeImage: steve, ABS, 75 , 100
+
+	GetImageSize: steve, sx, sy
+	GetImageSize: tree, tx, ty
+	GetImageSize: apple, ax, ay
+	PRINT: "Steve " + sx + " " + sy
+	PRINT: "Tree " + tx + " " + ty
+	PRINT: "Apple " + ax + " " + ay
+
+	CreateFrame: frame1
+	AddImageToFrame: tree, frame1, 0.0,0
+	AddImageToFrame: steve, frame1, 300,380
+	AddFrame: frame1
+
+    LOOP: st, 1, 8:
+    BEGIN:
+        CreateFrame : frame2
+        CopyFrame: frame1, frame2
+        AddImageToFrame: apple, frame2, 300,start
+        AddFrame: frame2
+        Assign: start , start + inc
+    END:
+	GENERATEFLIP:
+END:
