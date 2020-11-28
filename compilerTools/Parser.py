@@ -235,10 +235,10 @@ class Parser(object):
                 self.begin()
                 if i != end - 1:
                     self.lexer.curPos = beginPos
-
-                    self.nextToken()
-                    self.nextToken()
-                    self.nextToken()
+                    while self.curToken.kind != TokenType.BEGIN:
+                        # print("self " , self.curToken.text)
+                        # print("peek ", self.peekToken.text)
+                        self.nextToken()
                     if self.checkToken(TokenType.NEWLINE):
                         self.newline()
                 self.executor.incLoop(loopVar)
