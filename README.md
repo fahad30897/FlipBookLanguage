@@ -9,19 +9,19 @@ Requirements:
 You must have python version 3.7+ installed.
 ---
 
-Steps to setup:
+*Steps to setup:*
 
 1.> Run : pip3 install -r requirements.txt
 
-Steps to run:
+*Steps to run:*
 
 1.>  python3 main.py falling_apple.flip -o falling_apple.pdf -t pdf
 
-Usage:
+*Usage:*
 
 1.> python main.py <input-file> -o <output-file> [-d <int>] [-r <int>] [-l <int>] [-t ("pdf", "gif")]
 
-Options:
+*Options:*
 
  -o output file
  
