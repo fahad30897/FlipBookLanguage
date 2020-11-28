@@ -4,10 +4,10 @@ A language to generate Flipbooks
 You can find the Language description and featues in ProjectReport.pdf
 
 
-============================================================
+==
 Requirements:
 You must have python version 3.7+ installed.
-============================================================
+==
 
 Steps to setup:
 1.> Run : pip3 install -r requirements.txt
